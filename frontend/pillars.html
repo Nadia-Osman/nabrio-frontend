@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillars of Islam</title>
+  
+  <!-- importing Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- importing Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ===== Global Page Styling ===== */
+    body {
+      font-family: 'Poppins', sans-serif; /* clean font style */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      /* soft gradient background */
+      background: linear-gradient(to right, #a8edea, #75e07ea3);
+    }
+
+    /* ===== Main Title Styling ===== */
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-top: 20px;
+      color: #2c3e50;
+      /* applying bounce animation for liveliness */
+      animation: bounce 2s infinite;
+    }
+
+    /* bounce animation keyframes */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+      40% {transform: translateY(-20px);} 
+      60% {transform: translateY(-10px);} 
+    }
+
+    /* ===== Grid Layout for Pillars ===== */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive grid */
+      gap: 20px; /* spacing between cards */
+      margin: 40px;
+    }
+
+    /* ===== Styling Each Pillar Card ===== */
+    .pillar {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2); /* subtle shadow */
+      transition: transform 0.3s ease;
+    }
+
+    /* hover effect for interaction */
+    .pillar:hover {
+      transform: translateY(-10px);
+    }
+
+    /* icon inside each pillar */
+    .pillar i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #27ae60;
+    }
+
+    /* pillar title */
+    .pillar h2 {
+      font-size: 1.5rem;
+      color: #34495e;
+    }
+
+    /* pillar image */
+    .pillar img {
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* ===== Back Button Styling ===== */
+    .back-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 40px 0;
+    }
+
+    .back-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Page Heading -->
+  <h1>Pillars of Islam</h1>
+
+  <!-- Pillars Grid -->
+  <div class="pillars">
+
+    <!-- Pillar 1: Shahada -->
+    <div class="pillar">
+      <i class="fas fa-star-and-crescent"></i>
+      <h2>Shahada (Faith)</h2>
+      <p>Declaration of faith in the oneness of Allah and the finality of the Prophet Muhammad (ﷺ).</p>
+      
+      <!-- Arabic Shahada text -->
+      <p style="font-size: 1.2em; direction: rtl; text-align: center; font-family: 'Scheherazade', serif;">
+        أشهد أن لا إله إلا الله وأشهد أن محمدًا رسول الله
+      </p>
+      <!-- Transliteration -->
+      <p style="text-align: center; font-style: italic;">
+        Ashhadu an la ilaha illa Allah, wa ashhadu anna Muhammadan rasul Allah
+      </p>
+      <!-- English Translation -->
+      <p style="text-align: center; font-weight: bold;">
+        "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah."
+      </p>
+    </div>
+
+    <!-- Pillar 2: Salah -->
+    <div class="pillar">
+      <i class="fas fa-praying-hands"></i>
+      <h2>Salah (Prayer)</h2>
+      <p>Performing the five daily prayers facing the Kaaba in Makkah.</p>
+      <img src="assets/images/pictures/salah.jpg" alt="Salah Image">
+    </div>
+
+    <!-- Pillar 3: Zakat -->
+    <div class="pillar">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h2>Zakat (Charity)</h2>
+      <p>Giving a fixed portion of one’s wealth to the needy and poor.</p>
+      <img src="assets/images/pictures/zakat.jpg" alt="Zakat Image">
+    </div>
+
+    <!-- Pillar 4: Sawm -->
+    <div class="pillar">
+      <i class="fas fa-moon"></i>
+      <h2>Sawm (Fasting)</h2>
+      <p>Fasting during the month of Ramadan from dawn to sunset.</p>
+      <img src="assets/images/pictures/sawn.jpg" alt="Sawm Image">
+    </div>
+
+    <!-- Pillar 5: Hajj -->
+    <div class="pillar">
+      <i class="fas fa-kaaba"></i>
+      <h2>Hajj (Pilgrimage)</h2>
+      <p>Pilgrimage to Makkah at least once in a lifetime if physically and financially able.</p>
+      <img src="assets/images/pictures/hajj.jpg" alt="Hajj Image">
+    </div>
+
+  </div>
+
+  <!-- Back to Menu Button -->
+  <div style="text-align: center;">
+    <button class="back-button" onclick="window.location.href='menu.html'">🔙 Back to Menu</button>
+</div>
+
+</body>
+</html>

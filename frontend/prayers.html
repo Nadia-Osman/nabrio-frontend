@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Guide & Alarm Settings</title>
+
+  <!-- Importing Google Fonts for modern clean text -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== Global Styling ====== */
+    body {
+      font-family: 'Poppins', sans-serif; /* Using Poppins for clarity */
+      margin: 0;
+      background: linear-gradient(to right, #a8edea, #75e07ea3); /* soft gradient */
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    /* ====== Navigation Bar ====== */
+    nav {
+      background: #27ae60; /* green bar */
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      position: sticky; /* stays visible while scrolling */
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover { background: #1b5e20; } /* hover effect */
+
+    /* ====== Main Container ====== */
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      color: #27ae60;
+      margin-bottom: 20px;
+    }
+
+    /* ====== Prayer Times Table ====== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      font-weight: 600;
+    }
+    th { background: #27ae60; color: white; }
+    td { background: #f1f8f1; }
+
+    /* ====== Alarm & Prayer Form Inputs ====== */
+    .alarm-settings label, .pray-step label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    /* ====== Buttons ====== */
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-right: 10px;
+    }
+    button:hover { background: #1b5e20; }
+
+    /* ====== Collapsible Steps (Prayer Guide) ====== */
+    .collapsible {
+      background-color: #27ae60;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-bottom: 5px;
+      transition: background 0.3s;
+    }
+    .collapsible:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Hidden content (shows after clicking collapsible) */
+    .content {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f8f1;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Styling for prayer step images */
+    .pray-img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 10px auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== Navigation Menu ====== -->
+  <nav>
+    <a href="#alarms">Prayer Alarms</a>
+    <a href="#pray">How to Pray</a>
+  </nav>
+
+  <!-- ====== Prayer Times & Alarms Section ====== -->
+  <div class="container" id="alarms">
+    <h1>Daily Prayer Times</h1>
+
+    <!-- Static table for 5 daily prayers -->
+    <table>
+      <thead>
+        <tr>
+          <th>Prayer</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Fajr</td><td>05:00</td></tr>
+        <tr><td>Dhuhr</td><td>12:30</td></tr>
+        <tr><td>Asr</td><td>15:45</td></tr>
+        <tr><td>Maghrib</td><td>18:15</td></tr>
+        <tr><td>Isha</td><td>19:45</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Alarm Settings Section -->
+    <h2>Set Prayer Alarms</h2>
+    <div class="alarm-settings">
+      <!-- Prayer Selection -->
+      <label for="prayerSelect">Choose Prayer:</label>
+      <select id="prayerSelect">
+        <option value="Fajr">Fajr</option>
+        <option value="Dhuhr">Dhuhr</option>
+        <option value="Asr">Asr</option>
+        <option value="Maghrib">Maghrib</option>
+        <option value="Isha">Isha</option>
+      </select>
+
+      <!-- Alarm timing options -->
+      <label for="minutesBefore">Alarm:</label>
+      <select id="minutesBefore">
+        <option value="onTime">On Time</option>
+        <option value="5">5 Minutes Before</option>
+        <option value="10">10 Minutes Before</option>
+        <option value="15">15 Minutes Before</option>
+      </select>
+
+      <!-- Optional custom alarm time -->
+      <label for="alarmTime">Custom Time (optional):</label>
+      <input type="time" id="alarmTime">
+
+      <audio id="azanAudio" src="assets/audio/audio/azan.mp3" preload="auto"></audio>
+
+<select id="azanSelect">
+  <option value="assets/audio/audio/azan.mp3">Azan 1</option>
+  <option value="assets/audio/audio/azan2.mp3">Azan 2</option>
+  <option value="assets/audio/audio/azan3.mp3">Azan 3</option>
+</select>
+
+
+      <!-- Azan Preview & Stop Buttons -->
+      <button id="previewBtn">Preview Azan</button>
+      <button id="stopBtn">Stop Azan</button>
+
+      <!-- Audio element that plays the Azan -->
+      <audio id="azanAudio" src="" preload="auto"></audio>
+
+      <!-- Button to confirm alarm settings -->
+      <button id="setAlarmBtn">Set Alarm</button>
+    </div>
+
+    <!-- Feedback message area -->
+    <p id="alarmMsg"></p>
+  </div>
+
+  <!-- ====== How to Pray Section ====== -->
+  <div class="container" id="pray">
+    <h2>How to Pray</h2>
+
+    <!-- Each prayer step collapsible (expand to see details + image) -->
+    <div class="pray-step">
+      <button class="collapsible">1. Takbir (Start Prayer)</button>
+      <div class="content">
+        <p>Say: "Allahu Akbar" while raising your hands.</p>
+        <img src="assets/images/pictures/takbir.jpg" alt="Takbir position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">2. Qiyam (Standing)</button>
+      <div class="content">
+        <p>Recite Surah Al-Fatiha and another Surah silently in standing position.</p>
+        <img src="assets/images/pictures/Qiyam.jpg" alt="Qiyam position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">3. Ruku‘ (Bowing)</button>
+      <div class="content">
+        <p>Say: "Subhana Rabbiyal Azeem" (Glory be to my Lord, the Almighty) 3 times.</p>
+        <img src="assets/images/pictures/ruku.jpg" alt="Ruku position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">4. Sujud (Prostration)</button>
+      <div class="content">
+        <p>Say: "Subhana Rabbiyal A’la" (Glory be to my Lord, the Most High) 3 times.</p>
+        <img src="assets/images/pictures/sujud.jpg" alt="Sujud position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">5. Jalsa (Sitting between Sujud)</button>
+      <div class="content">
+        <p>Say: "Rabbighfir li" (My Lord, forgive me).</p>
+        <img src="assets/images/pictures/jalsa.jpg" alt="Jalsa position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">6. Tashahhud (Final Sitting)</button>
+      <div class="content">
+        <p>
+          Recite the testimony of faith: <br>
+          "At-tahiyyatu lillahi was-salawatu wat-tayyibat. Assalamu ‘alaika ayyuhan-nabiyyu wa rahmatullahi wa barakatuhu. 
+          Assalamu ‘alaina wa ‘ala ‘ibadillahis-salihin. Ashhadu an la ilaha illallahu wa ashhadu anna Muhammadan ‘abduhu wa rasuluhu."
+        </p>
+        <p>
+          Translation: "All greetings, prayers, and pure words are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. 
+          Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and Messenger."
+        </p>
+        <img src="assets/images/pictures/tashahhud.jpg" alt="Tashahhud position" class="pray-img">
+      </div>
+    </div>
+
+    <div class="pray-step">
+      <button class="collapsible">7. Salam (Ending Prayer)</button>
+      <div class="content">
+        <p>Turn your head right and left, saying: "Assalamu Alaikum wa Rahmatullah."</p>
+        <img src="assets/images/pictures/salam.jpg" alt="Salam position" class="pray-img">
+      </div>
+    </div>
+
+    <!-- Back button -->
+    <div style="text-align: center;">
+      <button class="back-button" onclick="window.location.href='menu.html'">🔙 Back to Menu</button>
+    </div>
+  </div>
+
+  <!-- Linking external JS for alarms & collapsibles -->
+  <script src="../backend/prayers.js"></script>
+
+
+</body>
+</html>

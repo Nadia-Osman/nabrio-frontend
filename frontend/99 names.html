@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>99 Names of Allah</title>
+
+  <!-- Importing Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Importing Font Awesome (for icons if needed later) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ====== Global Page Styling ====== */
+    body {
+      font-family: 'Poppins', sans-serif; /* clean, modern font */
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      /* soft gradient background */
+      background: linear-gradient(to right, #a8edea, #75e07ea3);
+    }
+
+    /* ====== Page Title ====== */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+      /* bounce animation to make heading lively */
+      animation: bounce 2s infinite;
+    }
+
+    /* bounce animation keyframes */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
+
+    /* ====== Intro Paragraph ====== */
+    p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #34495e;
+    }
+
+    /* ====== Names Grid ====== */
+    #namesContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* responsive columns */
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    /* styling each name card */
+    .allah-name {
+      background: #f8f9fa;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    /* hover effect for interactivity */
+    .allah-name:hover {
+      background: #e8f5e9;
+      transform: scale(1.05);
+    }
+
+    /* highlight effect (for when audio is playing specific name) */
+    .allah-name.highlight {
+      background: #2e7d32;
+      color: #fff;
+      font-weight: bold;
+      border: 2px solid #1b5e20;
+    }
+
+    /* ====== Buttons (Play & Back) ====== */
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #27ae60;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Page Heading -->
+  <h1>🌙 The 99 Names of Allah</h1>
+
+  <!-- Introduction Text -->
+  <p>
+    Learning the 99 Names of Allah (Asma Ul Husna) is an important part of Islamic knowledge. 
+    Each name reflects a unique attribute of Allah. Understanding and reciting them increases love, mindfulness, and devotion.
+  </p>
+
+  <!-- ====== Audio Section ====== -->
+  <!-- Button to play/pause recitation -->
+  <button id="playPauseBtn">▶️ Play Recitation</button>
+
+  <!-- Audio file (MP3 of 99 names) -->
+  <audio id="asmaAudio">
+    <source src="assets/audio/audio/99names.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ====== Container for Dynamically Loaded Names ====== -->
+  <div id="namesContainer"></div>
+
+  <!-- ====== Back Button to go back to Menu ====== -->
+  <button onclick="window.location.href='menu.html'">🔙 Back to Menu</button>
+
+  <!-- Linking external JS file that will handle the 99 names logic -->
+  <script src="../backend/99names.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup — NABRIO</title>
+  <!-- Linking external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Message area: this will display success/error messages dynamically -->
+    <div id="message" role="alert" style="text-align:center; margin-bottom:10px; color:green;"></div>
+
+    <!-- ================= LOGIN FORM ================= -->
+    <!-- This form is shown by default (active class). It handles user login. -->
+    <form class="form active" id="login-form" onsubmit="return false;">
+      <h2>Login</h2>
+      <!-- Login email input -->
+      <input type="email" id="login-email" placeholder="Email" aria-label="Email" oninput="checkLoginFields()">
+      
+      <!-- Login password input -->
+      <input type="password" id="login-password" placeholder="Password" aria-label="Password" oninput="checkLoginFields()">
+      
+      <!-- Login button (disabled until fields are filled correctly) -->
+      <button id="login-btn" onclick="login()" disabled>Login</button>
+      
+      <!-- Toggle to switch to Sign Up form -->
+      <div class="toggle">
+        New here? <button type="button" onclick="toggleForms()">Sign up</button>
+      </div>
+    </form>
+
+    <!-- ================= SIGNUP FORM ================= -->
+    <!-- This form is hidden by default. It validates user input before enabling signup. -->
+    <form class="form" id="signup-form" onsubmit="return false;">
+      <h2>Sign Up</h2>
+      
+      <!-- User full name -->
+      <input type="text" id="signup-name" placeholder="Full Name" aria-label="Full Name" oninput="validateForm()">
+      
+      <!-- User email -->
+      <input type="email" id="signup-email" placeholder="Email" aria-label="Email" oninput="validateForm()">
+      
+      <!-- Password field with live validation -->
+      <input type="password" id="signup-password" placeholder="Password" aria-label="Password" oninput="validateForm()">
+      
+      <!-- Password rules (these will turn valid/invalid dynamically) -->
+      <ul class="rules">
+        <li id="length" class="invalid">At least 8 characters</li>
+        <li id="uppercase" class="invalid">At least 1 uppercase letter</li>
+        <li id="lowercase" class="invalid">At least 1 lowercase letter</li>
+        <li id="number" class="invalid">At least 1 number</li>
+        <li id="special" class="invalid">At least 1 special character (!@#$%^&*)</li>
+      </ul>
+
+      <!-- Sign up button (disabled until all rules are satisfied) -->
+      <button id="signup-btn" onclick="signup()" disabled>Sign Up</button>
+      
+      <!-- Toggle back to Login form -->
+      <div class="toggle">
+        Already have an account? <button type="button" onclick="toggleForms()">Login</button>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- Linking JavaScript file (handles validation, form switching, and backend logic) -->
+   <script src="../backend/script.js"></script>
+</body>
+</html>
