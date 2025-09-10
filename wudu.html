@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How to Perform Wudu — NABRIO</title>
+  <style>
+    /* General body styling to give soft background and clean font */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f8f5;
+      color: #2f4f2f;
+    }
+
+    /* Wrapper centers everything */
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    /* Card for main container with rounded edges and shadow */
+    .card {
+      width: 100%;
+      max-width: 760px;
+      background: #e8f5e9;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      color: #2f4f2f;
+      animation: fadeIn 0.8s ease forwards; /* smooth entry animation */
+    }
+
+    /* Title styles */
+    h1 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    /* Sub-lead styling */
+    p.lead {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+    }
+
+    /* Steps box styling */
+    .steps {
+      background: #f1f8f1;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+      color: #2f4f2f;
+    }
+
+    /* Ordered list reset */
+    .steps ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    /* Each step fades in with slight delay */
+    .steps li {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: stepFadeIn 0.6s forwards;
+      margin-bottom: 6px;
+    }
+
+    /* Individual animation delays for progressive reveal */
+    .steps li:nth-child(1) { animation-delay: 0.2s; }
+    .steps li:nth-child(2) { animation-delay: 0.4s; }
+    .steps li:nth-child(3) { animation-delay: 0.6s; }
+    .steps li:nth-child(4) { animation-delay: 0.8s; }
+    .steps li:nth-child(5) { animation-delay: 1s; }
+    .steps li:nth-child(6) { animation-delay: 1.2s; }
+    .steps li:nth-child(7) { animation-delay: 1.4s; }
+    .steps li:nth-child(8) { animation-delay: 1.6s; }
+    .steps li:nth-child(9) { animation-delay: 1.8s; }
+    .steps li:nth-child(10){ animation-delay: 2s; }
+
+    /* Video container with aspect ratio */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000;
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover effect to make video interactive */
+    .video-wrapper:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Iframe takes full space */
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    /* Action button container */
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    /* Main button design */
+    .btn {
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: #2e7d32;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    /* Hover effect for buttons */
+    .btn:hover {
+      background: #1b5e20;
+      transform: scale(1.03);
+    }
+
+    /* Secondary button design */
+    .btn.secondary {
+      background: transparent;
+      color: #2f4f2f;
+      border: 1px solid #2e7d32;
+    }
+
+    /* Footer note under card */
+    .footer-note {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+    }
+
+    /* Animation for card */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Animation for list items */
+    @keyframes stepFadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 520px) {
+      .card { padding: 18px; }
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main">
+      <!-- Title of the page -->
+      <h1>How to Perform Wudu (Ablution)</h1>
+
+      <!-- Intro text -->
+      <p class="lead">Step-by-step guide to make Wudu correctly — followed by a clear video tutorial you can watch anytime.</p>
+
+      <!-- Steps Section -->
+      <div class="steps" aria-live="polite">
+        <strong>Quick steps</strong>
+        <ol>
+          <li>Make the intention (niyyah) to perform wudu.</li>
+          <li>Say “Bismillah” (In the name of Allah).</li>
+          <li>Wash both hands up to the wrists three times.</li>
+          <li>Rinse the mouth three times.</li>
+          <li>Inhale water gently into the nose and blow out three times.</li>
+          <li>Wash the face thoroughly three times.</li>
+          <li>Wash the right forearm up to the elbow three times, then the left.</li>
+          <li>Wipe the head once with wet hands (masah).</li>
+          <li>Wipe the inner and outer ears once.</li>
+          <li>Wash the right foot up to the ankle three times, then the left.</li>
+        </ol>
+        <!-- Note about variations -->
+        <p style="margin-top:8px;color:#555">These are general steps in accordance with the Sunnah — local madhhab details may vary slightly.</p>
+      </div>
+
+      <!-- Embedded video tutorial -->
+      <div class="video-wrapper" aria-label="Wudu video tutorial">
+        <iframe src="https://www.youtube.com/embed/2xS70Zn-jRk" title="How to: Wudhu - Green Lane Masjid" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Navigation button -->
+      <div class="actions">
+        <a class="btn secondary" href="menu.html">⬅ Back to Menu</a>
+      </div>
+
+      <!-- Footer note -->
+      <p class="footer-note">If this video does not play in your region, tell me and I will provide an alternative tutorial.</p>
+    </div>
+  </div>
+</body>
+</html>

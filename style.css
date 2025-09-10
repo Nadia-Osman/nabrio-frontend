@@ -1,0 +1,105 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;   /* Clean and readable font */
+  display: flex;                   /* Flexbox to center content */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                   /* Full viewport height */
+  margin: 0;                       /* Remove default margin */
+  background: linear-gradient(to right, #a8e6a1, #4caf50); /* Nice green gradient background */
+}
+
+/* Main container for forms */
+.container {
+  width: 350px;                    /* Fixed width for good alignment */
+  background: #ffffff;             /* White background for contrast */
+  padding: 25px;
+  border-radius: 15px;             /* Rounded corners */
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25); /* Shadow for depth */
+  position: relative;
+}
+
+/* Form heading (Login/Signup title) */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;                  /* Dark green heading */
+}
+
+/* Hide forms by default */
+.form {
+  display: none;
+}
+
+/* Show active form */
+.form.active {
+  display: block;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #4caf50;       /* Green border */
+  transition: all 0.3s ease;       /* Smooth animations */
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #2e7d32;           /* Darker green border on focus */
+  box-shadow: 0 0 6px rgba(46,125,50,0.4); /* Glow effect */
+  outline: none;                   /* Remove default outline */
+  transform: scale(1.02);          /* Slight zoom on focus */
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;             /* Dark green background */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Disabled button style */
+button:disabled {
+  background: #a5d6a7;             /* Faded green */
+  cursor: not-allowed;             /* Change cursor */
+}
+
+/* Hover effect for enabled buttons */
+button:hover:enabled {
+  background: #1b5e20;             /* Even darker green */
+}
+
+/* Toggle text (switch between login/signup) */
+.toggle {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.toggle a {
+  color: #2e7d32;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Password rules list */
+.rules {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+/* Dynamic validation colors */
+.rules li.valid { color: green; }   /* Rule satisfied */
+.rules li.invalid { color: red; }   /* Rule not satisfied */

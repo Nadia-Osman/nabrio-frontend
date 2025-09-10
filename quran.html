@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NABRIO Islamic App — Quran Lessons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9f4; /* light greenish-white */
+      color: #1b5e20; /* dark green text */
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white; /* white container */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2e7d32; /* professional green */
+    }
+
+    .surah {
+      background: #e6f4e6; /* light green */
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 10px;
+    }
+
+    .surah h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #1b5e20;
+    }
+
+    .surah p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-btn button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background: #2e7d32; /* dark green button */
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .back-btn button:hover {
+      background: #1b5e20;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Qur'an Lessons</h1>
+    <h2>Recitation & Translation</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5zahCVNEJIVKQBngNWX3JECUOurw727b" title="Quran Recitation with English Translation and Transliteration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <!-- Surah List -->
+    <div class="surah"><h3>1. Al-Fatiha (The Opening)</h3><p>Arabic: الْفَاتِحَة‎</p><p>Translation: The Opening</p></div>
+    <div class="surah"><h3>2. Al-Baqarah (The Cow)</h3><p>Arabic: الْبَقَرَة‎</p><p>Translation: The Cow</p></div>
+    <div class="surah"><h3>3. Al-Imran (Family of Imran)</h3><p>Arabic: آلِ عِمْرَان‎</p><p>Translation: Family of Imran</p></div>
+    <div class="surah"><h3>4. An-Nisa (The Women)</h3><p>Arabic: النِّسَاء‎</p><p>Translation: The Women</p></div>
+    <div class="surah"><h3>5. Al-Ma'idah (The Food)</h3><p>Arabic: المَائِدَة‎</p><p>Translation: The Food</p></div>
+    <div class="surah"><h3>6. Al-An'am (The Cattle)</h3><p>Arabic: الأَنْعَام‎</p><p>Translation: The Cattle</p></div>
+    <div class="surah"><h3>7. Al-A'raf (The Heights)</h3><p>Arabic: الأَعْرَاف‎</p><p>Translation: The Heights</p></div>
+    <div class="surah"><h3>8. Al-Anfal (The Spoils of War)</h3><p>Arabic: الأَنْفَال‎</p><p>Translation: The Spoils of War</p></div>
+    <div class="surah"><h3>9. At-Tawbah (The Repentance)</h3><p>Arabic: التَّوْبَة‎</p><p>Translation: The Repentance</p></div>
+    <div class="surah"><h3>10. Yunus (Jonah)</h3><p>Arabic: يُونُس‎</p><p>Translation: Jonah</p></div>
+        <div class="surah"><h3>11. Hud</h3><p>Arabic: هُود‎</p><p>Translation: Hud</p></div>
+    <div class="surah"><h3>12. Yusuf (Joseph)</h3><p>Arabic: يُوسُف‎</p><p>Translation: Joseph</p></div>
+    <div class="surah"><h3>13. Ar-Ra'd (The Thunder)</h3><p>Arabic: الرَّعْد‎</p><p>Translation: The Thunder</p></div>
+    <div class="surah"><h3>14. Ibrahim (Abraham)</h3><p>Arabic: إِبْرَاهِيم‎</p><p>Translation: Abraham</p></div>
+    <div class="surah"><h3>15. Al-Hijr (The Rocky Tract)</h3><p>Arabic: الحِجْر‎</p><p>Translation: The Rocky Tract</p></div>
+    
+    <!-- Surahs 16 to 114 -->
+    <div class="surah"><h3>16. An-Nahl (The Bee)</h3><p>Arabic: النَّحْل‎</p><p>Translation: The Bee</p></div>
+    <div class="surah"><h3>17. Al-Isra (The Night Journey)</h3><p>Arabic: الإِسْرَاء‎</p><p>Translation: The Night Journey</p></div>
+    <div class="surah"><h3>18. Al-Kahf (The Cave)</h3><p>Arabic: الكَهْف‎</p><p>Translation: The Cave</p></div>
+    <div class="surah"><h3>19. Maryam (Mary)</h3><p>Arabic: مَرْيَم‎</p><p>Translation: Mary</p></div>
+    <div class="surah"><h3>20. Ta-Ha</h3><p>Arabic: طه‎</p><p>Translation: Ta-Ha</p></div>
+    <div class="surah"><h3>21. Al-Anbiya (The Prophets)</h3><p>Arabic: الأَنْبِيَاء‎</p><p>Translation: The Prophets</p></div>
+    <div class="surah"><h3>22. Al-Hajj (The Pilgrimage)</h3><p>Arabic: الحَجّ‎</p><p>Translation: The Pilgrimage</p></div>
+    <div class="surah"><h3>23. Al-Mu’minun (The Believers)</h3><p>Arabic: المُؤْمِنُون‎</p><p>Translation: The Believers</p></div>
+    <div class="surah"><h3>24. An-Nur (The Light)</h3><p>Arabic: النُّور‎</p><p>Translation: The Light</p></div>
+    <div class="surah"><h3>25. Al-Furqan (The Criterion)</h3><p>Arabic: الفُرْقَان‎</p><p>Translation: The Criterion</p></div>
+    <div class="surah"><h3>26. Ash-Shu'ara (The Poets)</h3><p>Arabic: الشُّعَرَاء‎</p><p>Translation: The Poets</p></div>
+    <div class="surah"><h3>27. An-Naml (The Ant)</h3><p>Arabic: النَّمْل‎</p><p>Translation: The Ant</p></div>
+    <div class="surah"><h3>28. Al-Qasas (The Stories)</h3><p>Arabic: القَصَص‎</p><p>Translation: The Stories</p></div>
+    <div class="surah"><h3>29. Al-Ankabut (The Spider)</h3><p>Arabic: العَنْكَبُوت‎</p><p>Translation: The Spider</p></div>
+    <div class="surah"><h3>30. Ar-Rum (The Romans)</h3><p>Arabic: الرُّوم‎</p><p>Translation: The Romans</p></div>
+    <div class="surah">
+  <h3>31. Luqman</h3>
+  <p>Arabic: لُقْمَان‎</p>
+  <p>Translation: Luqman</p>
+</div>
+<div class="surah">
+  <h3>32. As-Sajdah (The Prostration)</h3>
+  <p>Arabic: السَّجْدَة‎</p>
+  <p>Translation: The Prostration</p>
+</div>
+<div class="surah">
+  <h3>33. Al-Ahzab (The Combined Forces)</h3>
+  <p>Arabic: الأَحْزَاب‎</p>
+  <p>Translation: The Combined Forces</p>
+</div>
+<div class="surah">
+  <h3>34. Saba (Sheba)</h3>
+  <p>Arabic: سَبَأ‎</p>
+  <p>Translation: Sheba</p>
+</div>
+<div class="surah">
+  <h3>35. Fatir (The Originator)</h3>
+  <p>Arabic: فَاطِر‎</p>
+  <p>Translation: The Originator</p>
+</div>
+<div class="surah">
+  <h3>36. Ya-Sin</h3>
+  <p>Arabic: يَس‎</p>
+  <p>Translation: Ya-Sin</p>
+</div>
+<div class="surah">
+  <h3>37. As-Saffat (Those Who Set The Ranks)</h3>
+  <p>Arabic: الصَّافَّات‎</p>
+  <p>Translation: Those Who Set The Ranks</p>
+</div>
+<div class="surah">
+  <h3>38. Sad</h3>
+  <p>Arabic: ص‎</p>
+  <p>Translation: Sad</p>
+</div>
+<div class="surah">
+  <h3>39. Az-Zumar (The Groups)</h3>
+  <p>Arabic: الزُّمَر‎</p>
+  <p>Translation: The Groups</p>
+</div>
+<div class="surah">
+  <h3>40. Ghafir (The Forgiver)</h3>
+  <p>Arabic: غَافِر‎</p>
+  <p>Translation: The Forgiver</p>
+</div>
+<div class="surah">
+  <h3>41. Fussilat (Explained in Detail)</h3>
+  <p>Arabic: فُصِّلَت‎</p>
+  <p>Translation: Explained in Detail</p>
+</div>
+<div class="surah">
+  <h3>42. Ash-Shura (The Consultation)</h3>
+  <p>Arabic: الشُّورَى‎</p>
+  <p>Translation: The Consultation</p>
+</div>
+<div class="surah">
+  <h3>43. Az-Zukhruf (The Gold Adornments)</h3>
+  <p>Arabic: الزُّخْرُف‎</p>
+  <p>Translation: The Gold Adornments</p>
+</div>
+<div class="surah">
+  <h3>44. Ad-Dukhan (The Smoke)</h3>
+  <p>Arabic: الدُّخَان‎</p>
+  <p>Translation: The Smoke</p>
+</div>
+<div class="surah">
+  <h3>45. Al-Jathiyah (The Crouching)</h3>
+  <p>Arabic: الجَاثِيَة‎</p>
+  <p>Translation: The Crouching</p>
+</div>
+<div class="surah">
+  <h3>46. Al-Ahqaf (The Wind-Curved Sandhills)</h3>
+  <p>Arabic: الأَحْقَاف‎</p>
+  <p>Translation: The Wind-Curved Sandhills</p>
+</div>
+<div class="surah">
+  <h3>47. Muhammad</h3>
+  <p>Arabic: مُحَمَّد‎</p>
+  <p>Translation: Muhammad</p>
+</div>
+<div class="surah">
+  <h3>48. Al-Fath (The Victory)</h3>
+  <p>Arabic: الفَتْح‎</p>
+  <p>Translation: The Victory</p>
+</div>
+<div class="surah">
+  <h3>49. Al-Hujurat (The Rooms)</h3>
+  <p>Arabic: الحُجُرَات‎</p>
+  <p>Translation: The Rooms</p>
+</div>
+<div class="surah">
+  <h3>50. Qaf</h3>
+  <p>Arabic: ق‎</p>
+  <p>Translation: Qaf</p>
+</div>
+<div class="surah">
+  <h3>51. Adh-Dhariyat (The Winnowing Winds)</h3>
+  <p>Arabic: الذَّارِيَات‎</p>
+  <p>Translation: The Winnowing Winds</p>
+</div>
+<div class="surah">
+  <h3>52. At-Tur (The Mount)</h3>
+  <p>Arabic: الطُّور‎</p>
+  <p>Translation: The Mount</p>
+</div>
+<div class="surah">
+  <h3>53. An-Najm (The Star)</h3>
+  <p>Arabic: النَّجْم‎</p>
+  <p>Translation: The Star</p>
+</div>
+<div class="surah">
+  <h3>54. Al-Qamar (The Moon)</h3>
+  <p>Arabic: القَمَر‎</p>
+  <p>Translation: The Moon</p>
+</div>
+<div class="surah">
+  <h3>55. Ar-Rahman (The Beneficent)</h3>
+  <p>Arabic: الرَّحْمَن‎</p>
+  <p>Translation: The Beneficent</p>
+</div>
+<div class="surah">
+  <h3>56. Al-Waqiah (The Inevitable)</h3>
+  <p>Arabic: الوَاقِعَة‎</p>
+  <p>Translation: The Inevitable</p>
+</div>
+<div class="surah">
+  <h3>57. Al-Hadid (The Iron)</h3>
+  <p>Arabic: الحَدِيد‎</p>
+  <p>Translation: The Iron</p>
+</div>
+<div class="surah">
+  <h3>58. Al-Mujadila (The Pleading Woman)</h3>
+  <p>Arabic: المُجَادِلَة‎</p>
+  <p>Translation: The Pleading Woman</p>
+</div>
+<div class="surah">
+  <h3>59. Al-Hashr (The Exile)</h3>
+  <p>Arabic: الحَشْر‎</p>
+  <p>Translation: The Exile</p>
+</div>
+<div class="surah">
+  <h3>60. Al-Mumtahanah (She that is to be examined)</h3>
+  <p>Arabic: المُمتَحَنَة‎</p>
+  <p>Translation: She that is to be examined</p>
+</div>
+<div class="surah">
+  <h3>61. As-Saff (The Ranks)</h3>
+  <p>Arabic: الصَّفّ‎</p>
+  <p>Translation: The Ranks</p>
+</div>
+<div class="surah">
+  <h3>62. Al-Jumuah (The Congregation)</h3>
+  <p>Arabic: الجُمُعَة‎</p>
+  <p>Translation: The Congregation</p>
+</div>
+<div class="surah">
+  <h3>63. Al-Munafiqun (The Hypocrites)</h3>
+  <p>Arabic: المُنَافِقُون‎</p>
+  <p>Translation: The Hypocrites</p>
+</div>
+<div class="surah">
+  <h3>64. At-Taghabun (The Mutual Disillusion)</h3>
+  <p>Arabic: التَّغَابُن‎</p>
+  <p>Translation: The Mutual Disillusion</p>
+</div>
+<div class="surah">
+  <h3>65. At-Talaq (The Divorce)</h3>
+  <p>Arabic: الطَّلاق‎</p>
+  <p>Translation: The Divorce</p>
+</div>
+<div class="surah">
+  <h3>66. At-Tahrim (The Prohibition)</h3>
+  <p>Arabic: التَّحْرِيم‎</p>
+  <p>Translation: The Prohibition</p>
+</div>
+<div class="surah">
+  <h3>67. Al-Mulk (The Sovereignty)</h3>
+  <p>Arabic: الملك‎</p>
+  <p>Translation: The Sovereignty</p>
+</div>
+<div class="surah">
+  <h3>68. Al-Qalam (The Pen)</h3>
+  <p>Arabic: القلم‎</p>
+  <p>Translation: The Pen</p>
+</div>
+<div class="surah">
+  <h3>69. Al-Haqqah (The Inevitable)</h3>
+  <p>Arabic: الحاقة‎</p>
+  <p>Translation: The Inevitable</p>
+</div>
+<div class="surah">
+  <h3>70. Al-Ma'arij (The Ascending Stairways)</h3>
+  <p>Arabic: المعارج‎</p>
+  <p>Translation: The Ascending Stairways</p>
+</div>
+<div class="surah">
+  <h3>71. Nuh (Noah)</h3>
+  <p>Arabic: نوح‎</p>
+  <p>Translation: Noah</p>
+</div>
+<div class="surah">
+  <h3>72. Al-Jinn (The Jinn)</h3>
+  <p>Arabic: الجن‎</p>
+  <p>Translation: The Jinn</p>
+</div>
+<div class="surah">
+  <h3>73. Al-Muzzammil (The Enshrouded One)</h3>
+  <p>Arabic: المزمل‎</p>
+  <p>Translation: The Enshrouded One</p>
+</div>
+<div class="surah">
+  <h3>74. Al-Muddathir (The Cloaked One)</h3>
+  <p>Arabic: المدثر‎</p>
+  <p>Translation: The Cloaked One</p>
+</div>
+<div class="surah">
+  <h3>75. Al-Qiyamah (The Resurrection)</h3>
+  <p>Arabic: القيامة‎</p>
+  <p>Translation: The Resurrection</p>
+</div>
+<div class="surah">
+  <h3>76. Al-Insan (The Human)</h3>
+  <p>Arabic: الإنسان‎</p>
+  <p>Translation: The Human</p>
+</div>
+<div class="surah">
+  <h3>77. Al-Mursalat (The Emissaries)</h3>
+  <p>Arabic: المرسلات‎</p>
+  <p>Translation: The Emissaries</p>
+</div>
+<div class="surah">
+  <h3>78. An-Naba' (The Tidings)</h3>
+  <p>Arabic: النبأ‎</p>
+  <p>Translation: The Tidings</p>
+</div>
+<div class="surah">
+  <h3>79. An-Nazi'at (Those Who Drag Forth)</h3>
+  <p>Arabic: النازعات‎</p>
+  <p>Translation: Those Who Drag Forth</p>
+</div>
+<div class="surah">
+  <h3>80. Abasa (He Frowned)</h3>
+  <p>Arabic: عبس‎</p>
+  <p>Translation: He Frowned</p>
+</div>
+<div class="surah">
+  <h3>81. At-Takwir (The Overthrowing)</h3>
+  <p>Arabic: التكوير‎</p>
+  <p>Translation: The Overthrowing</p>
+</div>
+<div class="surah">
+  <h3>82. Al-Infitar (The Cleaving)</h3>
+  <p>Arabic: الإنفطار‎</p>
+  <p>Translation: The Cleaving</p>
+</div>
+<div class="surah">
+  <h3>83. Al-Mutaffifin (Defrauding)</h3>
+  <p>Arabic: المطففين‎</p>
+  <p>Translation: Defrauding</p>
+</div>
+<div class="surah">
+  <h3>84. Al-Inshiqaq (The Splitting Open)</h3>
+  <p>Arabic: الإنشقاق‎</p>
+  <p>Translation: The Splitting Open</p>
+</div>
+<div class="surah">
+  <h3>85. Al-Buruj (The Mansions of the Stars)</h3>
+  <p>Arabic: البروج‎</p>
+  <p>Translation: The Mansions of the Stars</p>
+</div>
+<div class="surah">
+  <h3>86. At-Tariq (The Morning Star)</h3>
+  <p>Arabic: الطارق‎</p>
+  <p>Translation: The Morning Star</p>
+</div>
+<div class="surah">
+  <h3>87. Al-A'la (The Most High)</h3>
+  <p>Arabic: الأعلى‎</p>
+  <p>Translation: The Most High</p>
+</div>
+<div class="surah">
+  <h3>88. Al-Ghashiyah (The Overwhelming)</h3>
+  <p>Arabic: الغاشية‎</p>
+  <p>Translation: The Overwhelming</p>
+</div>
+<div class="surah">
+  <h3>89. Al-Fajr (The Dawn)</h3>
+  <p>Arabic: الفجر‎</p>
+  <p>Translation: The Dawn</p>
+</div>
+<div class="surah">
+  <h3>90. Al-Balad (The City)</h3>
+  <p>Arabic: البلد‎</p>
+  <p>Translation: The City</p>
+</div>
+<div class="surah">
+  <h3>91. Ash-Shams (The Sun)</h3>
+  <p>Arabic: الشمس‎</p>
+  <p>Translation: The Sun</p>
+</div>
+<div class="surah">
+  <h3>92. Al-Lail (The Night)</h3>
+  <p>Arabic: الليل‎</p>
+  <p>Translation: The Night</p>
+</div>
+<div class="surah">
+  <h3>93. Ad-Duhaa (The Morning Hours)</h3>
+  <p>Arabic: الضحى‎</p>
+  <p>Translation: The Morning Hours</p>
+</div>
+<div class="surah">
+  <h3>94. Ash-Sharh (The Relief)</h3>
+  <p>Arabic: الشرح‎</p>
+  <p>Translation: The Relief</p>
+</div>
+<div class="surah">
+  <h3>95. At-Tin (The Fig)</h3>
+  <p>Arabic: التين‎</p>
+  <p>Translation: The Fig</p>
+</div>
+<div class="surah">
+  <h3>96. Al-Alaq (The Clot)</h3>
+  <p>Arabic: العلق‎</p>
+  <p>Translation: The Clot</p>
+</div>
+<div class="surah">
+  <h3>97. Al-Qadr (The Power)</h3>
+  <p>Arabic: القدر‎</p>
+  <p>Translation: The Power</p>
+</div>
+<div class="surah">
+  <h3>98. Al-Bayyinah (The Clear Proof)</h3>
+  <p>Arabic: البينة‎</p>
+  <p>Translation: The Clear Proof</p>
+</div>
+<div class="surah">
+  <h3>99. Az-Zalzalah (The Earthquake)</h3>
+  <p>Arabic: الزلزلة‎</p>
+  <p>Translation: The Earthquake</p>
+</div>
+<div class="surah">
+  <h3>100. Al-Adiyat (The Courser)</h3>
+  <p>Arabic: العاديات‎</p>
+  <p>Translation: The Courser</p>
+</div>
+<div class="surah">
+  <h3>101. Al-Qari'ah (The Calamity)</h3>
+  <p>Arabic: القارعة‎</p>
+  <p>Translation: The Calamity</p>
+</div>
+<div class="surah">
+  <h3>102. At-Takathur (The Rivalry in World Increase)</h3>
+  <p>Arabic: التكاثر‎</p>
+  <p>Translation: The Rivalry in World Increase</p>
+</div>
+<div class="surah">
+  <h3>103. Al-Asr (The Declining Day)</h3>
+  <p>Arabic: العصر‎</p>
+  <p>Translation: The Declining Day</p>
+</div>
+<div class="surah">
+  <h3>104. Al-Humazah (The Slanderer)</h3>
+  <p>Arabic: الهمزة‎</p>
+  <p>Translation: The Slanderer</p>
+</div>
+<div class="surah">
+  <h3>105. Al-Fil (The Elephant)</h3>
+  <p>Arabic: الفيل‎</p>
+  <p>Translation: The Elephant</p>
+</div>
+<div class="surah">
+  <h3>106. Quraish</h3>
+  <p>Arabic: قريش‎</p>
+  <p>Translation: Quraish</p>
+</div>
+<div class="surah">
+  <h3>107. Al-Ma'un (Small Kindnesses)</h3>
+  <p>Arabic: الماعون‎</p>
+  <p>Translation: Small Kindnesses</p>
+</div>
+<div class="surah">
+  <h3>108. Al-Kawthar (Abundance)</h3>
+  <p>Arabic: الكوثر‎</p>
+  <p>Translation: Abundance</p>
+</div>
+<div class="surah">
+  <h3>109. Al-Kafirun (The Disbelievers)</h3>
+  <p>Arabic: الكافرون‎</p>
+  <p>Translation: The Disbelievers</p>
+</div>
+<div class="surah">
+  <h3>110. An-Nasr (Divine Support)</h3>
+  <p>Arabic: النصر‎</p>
+  <p>Translation: Divine Support</p>
+</div>
+<div class="surah">
+  <h3>111. Al-Masad (The Palm Fiber)</h3>
+  <p>Arabic: المسد‎</p>
+  <p>Translation: The Palm Fiber</p>
+</div>
+<div class="surah">
+  <h3>112. Al-Ikhlas (Sincerity)</h3>
+  <p>Arabic: الإخلاص‎</p>
+  <p>Translation: Sincerity</p>
+</div>
+<div class="surah">
+  <h3>113. Al-Falaq (The Daybreak)</h3>
+  <p>Arabic: الفلق‎</p>
+  <p>Translation: The Daybreak</p>
+</div>
+<div class="surah">
+  <h3>114. An-Nas (Mankind)</h3>
+  <p>Arabic: الناس‎</p>
+  <p>Translation: Mankind</p>
+</div>
+
+    <div class="back-btn">
+      <button onclick="window.location.href='menu.html'">← Back to Menu</button>
+    </div>
+  </div>
+</body>
+</html>
